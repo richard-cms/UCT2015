@@ -302,8 +302,10 @@ void UCT2015Producer::puSubtraction()
   puLevel = 0;
   puLevelUIC = 0;
   double r_puLevelUIC=0.0;
-  double r_puLevelHI[L1CaloRegionDetId::N_ETA];
-  int etaCount[L1CaloRegionDetId::N_ETA];
+  //double r_puLevelHI[L1CaloRegionDetId::N_ETA];
+  //int etaCount[L1CaloRegionDetId::N_ETA];
+  double r_puLevelHI[22]; //terrible but necessary for 44x
+  int etaCount[22]; 
   for(unsigned i = 0; i < L1CaloRegionDetId::N_ETA; ++i)
   {
     puLevelHI[i] = 0;

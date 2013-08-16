@@ -2,10 +2,11 @@
 #include "DataFormats/L1CaloTrigger/interface/L1CaloRegion.h"
 #include <cmath>
 #include <math.h>
+#include <cstdlib>
 
 int deltaPhiWrapAtN(unsigned int N, int phi1, int phi2) {
   int difference = phi1 - phi2;
-  if (std::abs(phi1 - phi2) == N-1) {
+  if ((unsigned)std::abs(phi1 - phi2) == N-1) {
     difference = -difference/std::abs(difference);
   }
   return difference;

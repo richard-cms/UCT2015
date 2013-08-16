@@ -177,8 +177,8 @@ void UCTStage1BProducer::fillRegionInfo(
     double tauCandEt = tauCand->rank() * tauLSB_;
     unsigned tauCandRegionIPhi = tauCand->regionId().iphi();
     unsigned tauCandRegionIEta = tauCand->regionId().ieta();
-    int deltaEta = std::abs(tauCandRegionIEta - ieta);
-    int deltaPhi = std::abs(deltaPhiWrapAtN(18, tauCandRegionIPhi, iphi));
+    int deltaEta = std::abs((int)(tauCandRegionIEta - ieta));
+    int deltaPhi = std::abs((int)(deltaPhiWrapAtN(18, tauCandRegionIPhi, iphi)));
     // on center region
     if (deltaEta == 0 && deltaPhi == 0) {
       if (tauCandEt > highestCenter2x1Et) {
